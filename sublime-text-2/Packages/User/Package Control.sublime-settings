@@ -1,0 +1,14 @@
+{
+	"auto_upgrade_last_run": 1340363514,
+	"installed_packages":
+	[
+		"Djaneiro",
+		"Git",
+		"LESS",
+		"Package Control",
+		"SublimeCodeIntel",
+		"sublimelint",
+		"SublimeLinter",
+		"Theme - Soda"
+	]
+}
