@@ -16,7 +16,7 @@
 	"indent_subsequent_lines": false,
 	"scroll_speed": 2.0,
 	"shift_tab_unindent": true,
-	"show_tab_close_buttons": false,
+	"show_tab_close_buttons": true,
 	"theme": "Soda Light.sublime-theme",
 	"word_wrap": false,
 	"rulers": [80],
