@@ -1,7 +1,4 @@
-// Settings in here override those in "Default/Preferences.sublime-settings", and
-// are overridden in turn by file type specific settings.
 {
-	//"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
 	"color_scheme": "Packages/Color Scheme - Default/IDLE.tmTheme",
 	"default_line_ending": "unix",
 	"fold_buttons": false,
@@ -14,12 +11,17 @@
 		"Vintage"
 	],
 	"indent_subsequent_lines": false,
+	"rulers":
+	[
+		80
+	],
 	"scroll_speed": 2.0,
 	"shift_tab_unindent": true,
-	"show_tab_close_buttons": false,
-	"theme": "Soda Light.sublime-theme",
-	"word_wrap": false,
-	"rulers": [80],
+	"show_tab_close_buttons": true,
 	"tabSize": 4,
-	"translateTabsToSpaces": true
+	"theme": "Soda Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
+	"word_wrap": false
 }

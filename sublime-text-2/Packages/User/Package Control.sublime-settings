@@ -9,6 +9,8 @@
 		"SublimeCodeIntel",
 		"sublimelint",
 		"SublimeLinter",
-		"Theme - Soda"
+		"Theme - Soda",
+		"Coffescript",
+		"CoffeeCompile",
 	]
 }
