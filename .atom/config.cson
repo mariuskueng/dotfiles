@@ -1,0 +1,42 @@
+"*":
+  "release-notes":
+    viewedVersion: "0.95.0"
+  welcome:
+    showOnStartup: false
+  editor:
+    fontSize: 12
+    showIndentGuide: true
+    useShadowDOM: true
+    invisibles: {}
+    fontFamily: "Menlo"
+  core:
+    disabledPackages: [
+      "metrics"
+      "feedback"
+      "atom-lint"
+      "emmet"
+      "linter-pylint"
+      "linter-scss-lint"
+      "exception-reporting"
+    ]
+    themes: [
+      "spacegray-dark-ui"
+      "base16-ocean-dark-spacegray"
+    ]
+  "linter-flake8":
+    ignoreErrorCodes: [
+      "E501"
+    ]
+  linter: {}
+  minimap: {}
+  "atom-lint": {}
+  tabs:
+    showIcons: true
+  "tree-view":
+    hideVcsIgnoredFiles: false
+    hideIgnoredNames: false
+    showOnRightSide: false
+  "autocomplete-plus": {}
+  "linter-scss-lint":
+    scssLintExecutablePath: "/usr/local/opt/rbenv/shims/scss-lint"
+    scssLintExcludedLinters: []
