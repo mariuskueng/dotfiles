@@ -107,3 +107,23 @@ alias meteor="JASMINE_BROWSER=PhantomJS meteor"
 # MATLAB
 export MATLAB_JAVA=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 alias matlab="/Applications/MATLAB_R2013a_Student.app/bin/matlab; exit;"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Setup zsh-autosuggestions
+source /Users/mariuskueng/.zsh-autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically
+zle-line-init() {
+    zle autosuggest-start
+}
+
+zle -N zle-line-init
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+bindkey '^T' autosuggest-toggle
+
+export NVM_DIR="/Users/mariuskueng/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
