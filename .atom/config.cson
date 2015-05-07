@@ -14,9 +14,6 @@
       "metrics"
       "feedback"
       "atom-lint"
-      "emmet"
-      "linter-pylint"
-      "linter-scss-lint"
       "exception-reporting"
     ]
     themes: [
@@ -27,7 +24,10 @@
     ignoreErrorCodes: [
       "E501"
     ]
-  linter: {}
+  linter:
+    subtleLinterErrors: [
+      "scss-lint"
+    ]
   minimap: {}
   "atom-lint": {}
   tabs:
@@ -38,5 +38,4 @@
     showOnRightSide: false
   "autocomplete-plus": {}
   "linter-scss-lint":
-    scssLintExecutablePath: "/usr/local/opt/rbenv/shims/scss-lint"
-    scssLintExcludedLinters: []
+    scssLintExecutablePath: "/Library/Ruby/Gems/2.0.0/gems/scss-lint-0.38.0/bin/scss-lint"
