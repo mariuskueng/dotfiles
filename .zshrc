@@ -45,7 +45,7 @@ ZSH_THEME="kennethreitz"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow brew rbenv npm gem pip heroku fabric django bundler bower docker gnu-utils colored-man zsh-syntax-highlighting sublime)
+plugins=(git git-flow mercurial brew rbenv npm gem pip heroku fabric django bundler bower docker gnu-utils colored-man zsh-syntax-highlighting sublime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,6 +60,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -85,11 +86,11 @@ alias mergemaster="git checkout master && git merge develop --no-ff && git check
 alias pullmaster="git checkout master && git pull origin master && git checkout develop"
 alias runs="./manage.py runserver 0.0.0.0:8000"
 alias ic="cd /Users/mariuskueng/Documents/Marius/Schule/FHNW/iCompetence/"
-alias resetversions="defaults delete com.blackpixel.versions FirstRunDate && defaults delete com.blackpixel.versions EZSBookmarksSelectionMask && defaults delete .GlobalPreferences com.blackpixel.versions.ezsRequiredToken && rm ~/.CF89AA64 && rm ~/Library/.FB64CF89"
 alias ADSync="ruby ~/projects/turbo-octo-hipster/SyncMe/rSyncMeNow.rb"
+alias rm=trash
 
 # android sdk
-export PATH=${PATH}:~/projects/java/adt-bundle/sdk/platform-tools:~/projects/java/adt-bundle/sdk/tools
+# export PATH=${PATH}:~/projects/java/adt-bundle/sdk/platform-tools:~/projects/java/adt-bundle/sdk/tools
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -99,7 +100,7 @@ eval "$(rbenv init -)"
 export PATH=/usr/local/texlive/2014/bin/x86_64-darwin:$PATH
 
 # Meteor cmd overwrite
-alias meteor="JASMINE_BROWSER=PhantomJS meteor"
+# alias meteor="JASMINE_BROWSER=PhantomJS meteor"
 
 # set phantomjs browser
 # export JASMINE_BROWSER=PhantomJS meteor
@@ -127,3 +128,23 @@ bindkey '^T' autosuggest-toggle
 
 export NVM_DIR="/Users/mariuskueng/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Lumen
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# Java home
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# JBOSS
+export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
+export PATH=${PATH}:${JBOSS_HOME}/bin
+
+# youtube-dl soundcloud alias
+alias soundcloud-dl="youtube-dl -o '%(title)s.%(ext)s'"
+
+# Docker stuff
+# eval $(docker-machine env default)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/mariuskueng/.sdkman"
+[[ -s "/Users/mariuskueng/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mariuskueng/.sdkman/bin/sdkman-init.sh"
