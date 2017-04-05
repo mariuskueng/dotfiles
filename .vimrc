@@ -1,1 +1,2 @@
-/Users/mariuskueng/.vimrc
+" Enable syntax highlighting
+syntax enable
