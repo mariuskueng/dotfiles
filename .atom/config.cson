@@ -122,7 +122,8 @@
   nuclide:
     "nuclide-home":
       showHome: false
-  "one-dark-ui": {}
+  "one-dark-ui":
+    layoutMode: "Compact"
   "one-light-ui":
     layoutMode: "Compact"
   "prettier-atom":
