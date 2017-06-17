@@ -33,3 +33,13 @@
   'React':
     'prefix': 'react'
     'body': '<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>\n<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react-with-addons.js"></script>'
+
+'.source.scss':
+    '&:hover, &:focus':
+      'prefix': 'hover'
+      'body': """
+      &:hover,
+      &:focus {
+          $1
+      }
+      """

@@ -6,6 +6,8 @@
     general:
       _analyticsUserId: "3e77ce4e-b042-4909-af83-9d3b263c4684"
   "atom-lint": {}
+  "atom-material-ui":
+    tabs: {}
   "atom-ternjs":
     snippetsFirst: true
   "atom-theme-toggle":
@@ -38,9 +40,6 @@
       "meteor-snippets"
       "metrics"
       "linter-flow"
-      "vim-mode"
-      "atom-tachyons"
-      "prettier-atom"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -62,6 +61,8 @@
       ".env"
       "compiled_static"
       "build"
+      "media"
+      "*ckeditor"
     ]
     projectHome: "/Users/mariuskueng/projects"
     telemetryConsent: "no"
@@ -69,7 +70,7 @@
       "one-dark-ui"
       "base16-syntax"
     ]
-    useCustomTitleBar: true
+    titleBar: "custom"
   "django-templates": {}
   editor:
     backUpBeforeSaving: true
@@ -105,6 +106,7 @@
     ]
   "linter-elm-make": {}
   "linter-eslint":
+    globalNodePath: "/Users/mariuskueng/.nvm/versions/node/v6.4.0"
     useGlobalEslint: true
   "linter-flake8":
     ignoreErrorCodes: [
@@ -116,23 +118,37 @@
   "linter-scss-lint":
     executablePath: "/usr/local/bin/scss-lint"
   "linter-ui-default":
-    panelHeight: 49
+    hidePanelWhenEmpty: true
     showPanel: true
-  minimap: {}
+  minimap:
+    disablePythonDocLinks: true
+    plugins:
+      bookmarks: false
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
   nuclide:
     "nuclide-home":
       showHome: false
-  "one-dark-ui":
-    layoutMode: "Compact"
-  "one-light-ui":
-    layoutMode: "Compact"
+  "one-dark-ui": {}
   "prettier-atom":
     formatOnSave: true
-    formatOnSaveOptions:
-      enabled: true
+    formatOnSaveOptions: {}
+    prettierEslintOptions: {}
     prettierOptions:
       singleQuote: true
-      tabWidth: "4"
       trailingComma: "es5"
   react: {}
   "release-notes":
@@ -164,6 +180,7 @@
     position: "Left"
   "tree-view":
     focusOnReveal: false
+    squashDirectoryNames: true
   "tree-view-open-files": {}
   "vim-mode": {}
   welcome:
