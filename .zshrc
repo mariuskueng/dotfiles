@@ -45,7 +45,7 @@ ZSH_THEME="kennethreitz"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow mercurial brew rbenv npm gem pip heroku fabric django bundler bower docker gnu-utils colored-man zsh-syntax-highlighting sublime)
+plugins=(git git-flow mercurial brew rbenv npm gem pip heroku fabric django bundler bower docker gnu-utils colored-man zsh-syntax-highlighting sublime zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,20 +111,6 @@ export PATH=/usr/local/texlive/2014/bin/x86_64-darwin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# Setup zsh-autosuggestions
-source /Users/mariuskueng/.zsh-autosuggestions/autosuggestions.zsh
-
-# Enable autosuggestions automatically
-zle-line-init() {
-  zle autosuggest-start
-}
-
-zle -N zle-line-init
-
-# # use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
-# # zsh-autosuggestions is designed to be unobtrusive)
-# bindkey '^T' autosuggest-toggle
 
 export NVM_DIR="/Users/mariuskueng/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
