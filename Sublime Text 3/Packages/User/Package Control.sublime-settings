@@ -2,6 +2,10 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"EditorConfig",
+		"ESLint",
+		"GitGutter",
+		"Predawn"
 	],
 	"installed_packages":
 	[
@@ -13,6 +17,7 @@
 		"CSS Snippets",
 		"CSSLint",
 		"Djaneiro",
+		"EditorConfig",
 		"Emmet",
 		"ESLint",
 		"Git",
@@ -39,6 +44,7 @@
 		"Sass",
 		"SASS Snippets",
 		"SFTP",
+		"SideBarEnhancements",
 		"Sublime Tutor",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
@@ -46,6 +52,7 @@
 		"SublimeLinter-pep8",
 		"SublimeLinter-phplint",
 		"Theme - Soda",
-		"Theme - Spacegray"
+		"Theme - Spacegray",
+		"Themes Menu Switcher"
 	]
 }
