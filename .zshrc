@@ -98,6 +98,9 @@ alias .senv="source .env/bin/activate"
 alias solr_start='cd ~/projects/solr/example; java -jar start.jar'
 alias dup="docker-compose up"
 alias dbash="docker-compose exec web /bin/bash"
+alias dstop="docker stop $(docker ps -a -q)"
+alias staticbuild="npm run build && git add -A && git commit -am 'Static build'"
+alias dmanage="docker-compose run --rm web python manage.py"
 
 # youtube-dl soundcloud alias
 alias soundcloud-dl="youtube-dl -o '%(title)s.%(ext)s'"
@@ -112,5 +115,6 @@ export PATH=/usr/local/texlive/2014/bin/x86_64-darwin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# NVM
 export NVM_DIR="/Users/mariuskueng/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
