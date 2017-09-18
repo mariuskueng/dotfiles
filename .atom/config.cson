@@ -8,6 +8,8 @@
   "atom-lint": {}
   "atom-material-ui":
     tabs: {}
+  "atom-package-deps":
+    ignored: []
   "atom-ternjs":
     snippetsFirst: true
   "atom-theme-toggle":
@@ -79,7 +81,6 @@
     invisibles: {}
     preferredLineLength: 100
     scrollPastEnd: true
-    showIndentGuide: true
     tabType: "soft"
   "elm-format": {}
   elmjutsu:
@@ -106,8 +107,7 @@
     ]
   "linter-elm-make": {}
   "linter-eslint":
-    globalNodePath: "/Users/mariuskueng/.nvm/versions/node/v6.4.0"
-    useGlobalEslint: true
+    fixOnSave: true
   "linter-flake8":
     ignoreErrorCodes: [
       "E501"
@@ -116,9 +116,11 @@
     executablePath: "/Users/mariuskueng/.nvm/versions/node/v6.4.0/bin/jshint"
   "linter-pylint": {}
   "linter-scss-lint":
+    configName: "~/projects/allink/.scss-lint.yml"
     executablePath: "/usr/local/bin/scss-lint"
   "linter-ui-default":
     hidePanelWhenEmpty: true
+    panelHeight: 70
     showPanel: true
   minimap:
     disablePythonDocLinks: true
@@ -150,6 +152,7 @@
     prettierOptions:
       singleQuote: true
       trailingComma: "es5"
+    useEslint: true
   react: {}
   "release-notes":
     viewedVersion: "0.95.0"
@@ -180,7 +183,6 @@
     position: "Left"
   "tree-view":
     focusOnReveal: false
-    squashDirectoryNames: true
   "tree-view-open-files": {}
   "vim-mode": {}
   welcome:

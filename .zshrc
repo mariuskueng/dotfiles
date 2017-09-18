@@ -85,10 +85,10 @@ source ~/.allink.sh
 
 # shortcuts
 alias ll="ls -l"
-alias mergemaster='git checkout master && git pull && git merge --no-ff develop && git checkout develop'
 alias pullmaster="git checkout master && git pull origin master && git checkout develop"
 alias runs="./manage.py runserver 0.0.0.0:8000"
 alias mergemaster='git checkout master && git pull && git merge --no-ff develop && git checkout develop'
+alias mergestage='git checkout stage && git pull && git merge develop && git checkout develop'
 alias cookiecut='cookiecutter https://github.com/allink/cookiecutter-allink-project'
 alias ic="cd /Users/mariuskueng/Documents/Marius/Schule/FHNW/iCompetence/"
 alias adsync="ruby ~/projects/turbo-octo-hipster/SyncMe/rSyncMeNow.rb"
@@ -102,8 +102,14 @@ alias dstop="docker stop $(docker ps -a -q)"
 alias staticbuild="npm run build && git add -A && git commit -am 'Static build'"
 alias dmanage="docker-compose run --rm web python manage.py"
 
+# docker uwsgi
+export START_WEB="python manage.py runserver 0.0.0.0:80"
+
 # youtube-dl soundcloud alias
 alias soundcloud-dl="youtube-dl -o '%(title)s.%(ext)s'"
+
+# youtube-dl mp4 shortcout
+alias ydl="youtube-dl -f mp4"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"

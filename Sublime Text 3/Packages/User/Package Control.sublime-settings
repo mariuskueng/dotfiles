@@ -2,10 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"EditorConfig",
-		"ESLint",
-		"GitGutter",
-		"Predawn"
 	],
 	"installed_packages":
 	[

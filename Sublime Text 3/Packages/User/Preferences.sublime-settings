@@ -13,9 +13,7 @@
 		"CVS",
 		".phpintel",
 		"env",
-		".env",
-		"build",
-		"node_modules"
+		".env"
 	],
 	"font_face": "Input Mono",
 	"font_size": 12.0,
@@ -55,7 +53,7 @@
 	"show_tab_close_buttons": true,
 	"spacegray_fileicons": true,
 	"tabSize": 2,
-	"theme": "Spacegray.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
