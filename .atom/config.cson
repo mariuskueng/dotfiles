@@ -42,6 +42,9 @@
       "meteor-snippets"
       "metrics"
       "linter-flow"
+      "linter-scss-lint"
+      "prettier-atom"
+      "linter"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -65,8 +68,11 @@
       "build"
       "media"
       "*ckeditor"
+      ".idea"
+      ".vscode"
     ]
     projectHome: "/Users/mariuskueng/projects"
+    restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
@@ -106,8 +112,7 @@
       "flake8"
     ]
   "linter-elm-make": {}
-  "linter-eslint":
-    fixOnSave: true
+  "linter-eslint": {}
   "linter-flake8":
     ignoreErrorCodes: [
       "E501"
@@ -120,7 +125,7 @@
     executablePath: "/usr/local/bin/scss-lint"
   "linter-ui-default":
     hidePanelWhenEmpty: true
-    panelHeight: 70
+    panelHeight: 300
     showPanel: true
   minimap:
     disablePythonDocLinks: true
@@ -147,7 +152,8 @@
   "one-dark-ui": {}
   "prettier-atom":
     formatOnSave: true
-    formatOnSaveOptions: {}
+    formatOnSaveOptions:
+      enabled: true
     prettierEslintOptions: {}
     prettierOptions:
       singleQuote: true

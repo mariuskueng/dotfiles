@@ -43,3 +43,8 @@
           $1
       }
       """
+
+'.source.python':
+    "_(u'Name')":
+      'prefix': '_'
+      'body': "_(u'$1')"
