@@ -17,7 +17,9 @@
 		"Emmet",
 		"ESLint",
 		"Git",
+		"Git blame",
 		"GitGutter",
+		"Handlebars",
 		"HexViewer",
 		"HTML-CSS-JS Prettify",
 		"Jade",
@@ -25,6 +27,7 @@
 		"LESS",
 		"Monokai - Spacegray",
 		"Normalize Indentation",
+		"Oceanic Color Scheme",
 		"Package Control",
 		"Phpcs",
 		"PhpDoc",
@@ -43,12 +46,16 @@
 		"SideBarEnhancements",
 		"Sublime Tutor",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-scss-lint",
+		"SublimeLinter-eslint",
 		"SublimeLinter-pep8",
 		"SublimeLinter-phplint",
 		"Theme - Soda",
 		"Theme - Spacegray",
-		"Themes Menu Switcher"
+		"Themes Menu Switcher",
+		"Vuejs Complete Package",
+		"Vuejs Snippets",
+		"Vuejs Snippets Airbnb",
+		"Vuetify"
 	]
 }
