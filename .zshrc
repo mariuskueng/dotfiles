@@ -45,7 +45,27 @@ ZSH_THEME="kennethreitz"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow mercurial brew rbenv npm gem pip heroku fabric django bundler bower docker gnu-utils colored-man zsh-syntax-highlighting sublime zsh-autosuggestions)
+plugins=(
+    git
+    git-flow
+    mercurial
+    brew
+    rbenv
+    npm
+    gem
+    pip
+    heroku
+    fabric
+    django
+    bundler
+    bower
+    docker
+    gnu-utils
+    colored-man-pages
+    zsh-syntax-highlighting
+    sublime
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,6 +82,9 @@ source $ZSH/oh-my-zsh.sh
 # fi
 export EDITOR='vim'
 
+# Default browser
+export BROWSER=google-chrome-stable
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -72,8 +95,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
 zstyle ':completion:*' insert-tab false
 
 # binaries
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PATH=/usr/local/bin:$PATH
+# export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/usr/local/bin:/usr/local/opt/python/libexec/bin:$PATH
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/opt/python@2/bin:$PATH"
 
 # python virtualenvs
 export WORKON_HOME=~/.virtualenvs
@@ -85,6 +110,7 @@ source ~/.allink.sh
 
 # shortcuts
 alias ll="ls -l"
+#alias cat="bat"
 alias pullmaster="git checkout master && git pull origin master && git checkout develop"
 alias runs="./manage.py runserver 0.0.0.0:8000"
 alias mergemaster='git checkout master && git pull && git merge --no-ff develop && git checkout develop'
@@ -96,11 +122,20 @@ alias rm=trash
 alias senv="source env/bin/activate"
 alias .senv="source .env/bin/activate"
 alias solr_start='cd ~/projects/solr/example; java -jar start.jar'
-alias dup="docker-compose up"
-alias dbash="docker-compose exec web /bin/bash"
-alias dstop="docker stop $(docker ps -a -q)"
-alias staticbuild="npm run build && git add -A && git commit -am 'Static build'"
-alias dmanage="docker-compose run --rm web python manage.py"
+alias static_build="npm run build && git add -A && git commit -am 'Static build'"
+alias python_clean='find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf'
+alias static_clean="rm static/build && gco -- static/build webpack-stats.json"
+alias ngrok="~/ngrok http"
+
+# docker shortcuts
+alias dup="docker-compose up" # start project
+alias dbash="docker-compose exec web /bin/bash" # run bash commands inside container. i.e.: dbash ls
+alias dmanage="docker-compose run --rm web python manage.py" # run django management commands. i.e.: dmanage makemessages
+# dstop() { docker stop $(docker ps -a -q); } # stop all containers
+function dstop(){
+    docker stop $(docker ps -a -q)
+    docker ps -a | awk '{ print $1,$2 }' | grep -v postgres | awk '{if(NR>1)print}' | awk '{print $1 }' | xargs -I {} docker rm {}
+}
 
 # docker uwsgi
 export START_WEB="python manage.py runserver 0.0.0.0:80"
@@ -109,7 +144,7 @@ export START_WEB="python manage.py runserver 0.0.0.0:80"
 alias soundcloud-dl="youtube-dl -o '%(title)s.%(ext)s'"
 
 # youtube-dl mp4 shortcout
-alias ydl="youtube-dl -f mp4"
+alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 -o ~/Movies/%(title)s.%(ext)s"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -124,3 +159,31 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # NVM
 export NVM_DIR="/Users/mariuskueng/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# init nvm use in every directory
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+# pyenv
+eval "$(pyenv init -)"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
