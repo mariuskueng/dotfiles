@@ -115,6 +115,7 @@ alias pullmaster="git checkout master && git pull origin master && git checkout 
 alias runs="./manage.py runserver 0.0.0.0:8000"
 alias mergemaster='git checkout master && git pull && git merge --no-ff develop && git checkout develop'
 alias mergestage='git checkout stage && git pull && git merge develop && git checkout develop'
+alias pin='docker-compose run --rm web pip-reqs compile' # pin python requirements in docker
 alias cookiecut='cookiecutter https://github.com/allink/cookiecutter-allink-project'
 alias ic="cd /Users/mariuskueng/Documents/Marius/Schule/FHNW/iCompetence/"
 alias adsync="ruby ~/projects/turbo-octo-hipster/SyncMe/rSyncMeNow.rb"
