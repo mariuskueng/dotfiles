@@ -126,16 +126,22 @@ alias solr_start='cd ~/projects/solr/example; java -jar start.jar'
 alias static_build="npm run build && git add -A && git commit -am 'Static build'"
 alias python_clean='find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf'
 alias static_clean="rm static/build && gco -- static/build webpack-stats.json"
-alias ngrok="~/ngrok http"
+alias ngrok="~/projects/ngrok http"
 
 # docker shortcuts
 alias dup="docker-compose up" # start project
 alias dbash="docker-compose exec web /bin/bash" # run bash commands inside container. i.e.: dbash ls
 alias dmanage="docker-compose run --rm web python manage.py" # run django management commands. i.e.: dmanage makemessages
 # dstop() { docker stop $(docker ps -a -q); } # stop all containers
+# function dstop(){
+#     docker stop $(docker ps -a -q)
+#     docker ps -a | awk '{ print $1,$2 }' | grep -v postgres | awk '{if(NR>1)print}' | awk '{print $1 }' | xargs -I {} docker rm {}
+# }
 function dstop(){
     docker stop $(docker ps -a -q)
     docker ps -a | awk '{ print $1,$2 }' | grep -v postgres | awk '{if(NR>1)print}' | awk '{print $1 }' | xargs -I {} docker rm {}
+    # remove all dangling images
+    docker image prune
 }
 
 # docker uwsgi
@@ -188,3 +194,6 @@ load-nvmrc
 eval "$(pyenv init -)"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/mariuskueng/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;

@@ -1,10 +1,9 @@
 {
     "editor.fontFamily": "Input Mono",
-    "editor.tabSize": 4,
+    "editor.tabSize": 2,
     "files.trimTrailingWhitespace": true,
     "javascript.format.enable": true,
     "prettier.singleQuote": true,
-    "prettier.eslintIntegration": true,
     "prettier.trailingComma": "all",
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -13,40 +12,46 @@
     "editor.wordWrap": "off",
     "window.newWindowDimensions": "inherit",
     "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/*.pyc": true,
         "**/__pycache__": true,
+        "**/.cache": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.next": true,
+        "**/.svn": true,
+        "**/*.pyc": true,
+        "**/CVS": true,
         "**/env": true
     },
     "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/media": true,
-        "**/*.pyc": true,
+        "**/.cache": true,
         "**/.env": true,
-        "**/build": true,
-        "**/static/djangocms_text_ckeditor": true,
-        "**/migrations": true,
-        "**/static_collected": true,
         "**/.history": true,
+        "**/*.pyc": true,
+        "**/bower_components": true,
+        "**/build": true,
+        "**/media": true,
+        "**/migrations": true,
+        "**/node_modules": true,
+        "**/static_collected": true,
+        "**/static/djangocms_text_ckeditor": true,
+        "**/yarn.lock": true
     },
     "emmet.triggerExpansionOnTab": true,
     "emmet.excludeLanguages": [
         "markdown",
-        "javascript"
     ],
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
-        "vue-html": "html"
+        "vue-html": "html",
+        "django-html": "html"
     },
     "files.associations": {
         "*.inc": "php",
         "*.module": "php",
-        "*.html": "django-html"
+        "**/templates/*.html": "django-html",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+        "*.html": "html"
     },
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
@@ -96,7 +101,7 @@
     ],
     "gitlens.keymap": "chorded",
     "editor.tabCompletion": "off",
-    "editor.formatOnType": false,
+    "editor.formatOnType": true,
     "workbench.editor.tabSizing": "shrink",
     "vetur.format.defaultFormatter.html": "prettier",
     "vetur.format.defaultFormatter.css": "prettier",
@@ -121,15 +126,14 @@
         "**/*.js",
         "**/*.vue",
     ],
-    "explorer.autoReveal": false,
     "[json]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
     "[scss]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
     "[css]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
@@ -142,6 +146,23 @@
     "local-history.path": "/Users/mariuskueng/.vscode/",
     "local-history.absolute": true,
     "editor.wordBasedSuggestions": false,
-    "workbench.colorTheme": "Spacegray Ocean Dark",
-    "workbench.iconTheme": "file-icons"
+    "workbench.colorTheme": "Gatito Theme",
+    "workbench.iconTheme": "file-icons",
+    "stylelint.enable": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "editor.autoClosingBrackets": "always",
+    "editor.snippetSuggestions": "top",
+    "jest.enableSnapshotUpdateMessages": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.insertFinalNewline": true,
+    "python.showStartPage": false,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.suggestSmartCommit": false,
+    "jupyter.askForKernelRestart": false
 }

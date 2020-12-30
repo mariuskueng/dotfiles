@@ -40,7 +40,7 @@
 		]
 	},
 	"@include media-breakpoint-down(sm)": {
-		"prefix": "max",
+		"prefix": "sm",
 		"body": [
 			"@include media-breakpoint-down(sm) {",
 			"    $1",
