@@ -1,168 +1,157 @@
 {
-    "editor.fontFamily": "Input Mono",
-    "editor.tabSize": 2,
-    "files.trimTrailingWhitespace": true,
-    "javascript.format.enable": true,
-    "prettier.singleQuote": true,
-    "prettier.trailingComma": "all",
-    "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "workbench.startupEditor": "newUntitledFile",
-    "python.linting.pylintEnabled": true,
-    "editor.wordWrap": "off",
-    "window.newWindowDimensions": "inherit",
-    "files.exclude": {
-        "**/__pycache__": true,
-        "**/.cache": true,
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.next": true,
-        "**/.svn": true,
-        "**/*.pyc": true,
-        "**/CVS": true,
-        "**/env": true
+  "editor.fontFamily": "Input Mono",
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "javascript.format.enable": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "workbench.startupEditor": "newUntitledFile",
+  "python.linting.pylintEnabled": true,
+  "editor.wordWrap": "off",
+  "window.newWindowDimensions": "inherit",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.cache": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.next": true,
+    "**/.svn": true,
+    "**/*.pyc": true,
+    "**/CVS": true,
+    "**/env": true
+  },
+  "search.exclude": {
+    "**/.cache": true,
+    "**/.env": true,
+    "**/.history": true,
+    "**/*.pyc": true,
+    "**/bower_components": true,
+    "**/build": true,
+    "**/media": true,
+    "**/migrations": true,
+    "**/node_modules": true,
+    "**/static_collected": true,
+    "**/static/djangocms_text_ckeditor": true,
+    "**/yarn.lock": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "django-html": "html"
+  },
+  "files.associations": {
+    "*.inc": "php",
+    "*.module": "php",
+    "**/templates/*.html": "django-html",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "*.html": "html"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "git.confirmSync": false,
+  "gitlens.codeLens.enabled": false,
+  "git.autofetch": true,
+  "eslint.options": {
+    "extensions": [".html", ".js", ".vue", ".jsx"]
+  },
+  "eslint.validate": [
+    {
+      "language": "html",
+      "autoFix": true
     },
-    "search.exclude": {
-        "**/.cache": true,
-        "**/.env": true,
-        "**/.history": true,
-        "**/*.pyc": true,
-        "**/bower_components": true,
-        "**/build": true,
-        "**/media": true,
-        "**/migrations": true,
-        "**/node_modules": true,
-        "**/static_collected": true,
-        "**/static/djangocms_text_ckeditor": true,
-        "**/yarn.lock": true
+    {
+      "language": "vue",
+      "autoFix": true
     },
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.excludeLanguages": [
-        "markdown",
-    ],
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact",
-        "vue-html": "html",
-        "django-html": "html"
+    {
+      "language": "javascript",
+      "autoFix": true
     },
-    "files.associations": {
-        "*.inc": "php",
-        "*.module": "php",
-        "**/templates/*.html": "django-html",
-        "**/requirements{/**,*}.{txt,in}": "pip-requirements",
-        "*.html": "html"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": true,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
-    },
-    "git.confirmSync": false,
-    "gitlens.codeLens.enabled": false,
-    "git.autofetch": true,
-    "eslint.options": {
-        "extensions": [
-            ".html",
-            ".js",
-            ".vue",
-            ".jsx"
-        ]
-    },
-    "eslint.validate": [{
-            "language": "html",
-            "autoFix": true
-        },
-        {
-            "language": "vue",
-            "autoFix": true
-        },
-        {
-            "language": "javascript",
-            "autoFix": true
-        },
-        {
-            "language": "javascriptreact",
-            "autoFix": true
-        }
-    ],
-    "importCost.typescriptExtensions": [
-        "\\.tsx?$",
-        "\\.vue$"
-    ],
-    "gitlens.keymap": "chorded",
-    "editor.tabCompletion": "off",
-    "editor.formatOnType": true,
-    "workbench.editor.tabSizing": "shrink",
-    "vetur.format.defaultFormatter.html": "prettier",
-    "vetur.format.defaultFormatter.css": "prettier",
-    "vetur.format.defaultFormatter.postcss": "prettier",
-    "vetur.format.defaultFormatter.scss": "prettier",
-    "vetur.format.defaultFormatter.less": "prettier",
-    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-    "vetur.format.defaultFormatter.js": "prettier",
-    "vetur.format.defaultFormatter.ts": "prettier",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "telemetry.enableTelemetry": false,
-    "dayNightThemeSwitcher.dayTheme": "Spacegray Ocean Light",
-    "dayNightThemeSwitcher.nightTheme": "Spacegray Ocean Dark",
-    "breadcrumbs.enabled": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "python.linting.enabled": true,
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
-    "editor.fontLigatures": true,
-    "window.zoomLevel": 0,
-    "beautify.ignore": [
-        "**/*.js",
-        "**/*.vue",
-    ],
-    "[json]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "[scss]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "[css]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "markdown.preview.fontFamily": "-apple-systlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
-    "vsicons.dontShowNewVersionMessage": true,
-    "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "editor.minimap.enabled": false,
-    "local-history.path": "/Users/mariuskueng/.vscode/",
-    "local-history.absolute": true,
-    "editor.wordBasedSuggestions": false,
-    "workbench.colorTheme": "Gatito Theme",
-    "workbench.iconTheme": "file-icons",
-    "stylelint.enable": true,
-    "css.validate": false,
-    "less.validate": false,
-    "scss.validate": false,
-    "editor.autoClosingBrackets": "always",
-    "editor.snippetSuggestions": "top",
-    "jest.enableSnapshotUpdateMessages": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "files.insertFinalNewline": true,
-    "python.showStartPage": false,
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "git.suggestSmartCommit": false,
-    "jupyter.askForKernelRestart": false
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    }
+  ],
+  "importCost.typescriptExtensions": ["\\.tsx?$", "\\.vue$"],
+  "gitlens.keymap": "chorded",
+  "editor.tabCompletion": "off",
+  "editor.formatOnType": true,
+  "workbench.editor.tabSizing": "shrink",
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.postcss": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "telemetry.enableTelemetry": false,
+  "dayNightThemeSwitcher.dayTheme": "Spacegray Ocean Light",
+  "dayNightThemeSwitcher.nightTheme": "Spacegray Ocean Dark",
+  "breadcrumbs.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.linting.enabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 0,
+  "beautify.ignore": ["**/*.js", "**/*.vue"],
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[css]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "markdown.preview.fontFamily": "-apple-systlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
+  "vsicons.dontShowNewVersionMessage": true,
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "editor.minimap.enabled": false,
+  "local-history.path": "/Users/mariuskueng/.vscode/",
+  "local-history.absolute": true,
+  "editor.wordBasedSuggestions": false,
+  "workbench.colorTheme": "Gatito Theme",
+  "workbench.iconTheme": "file-icons",
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+"editor.autoClosingBrackets": "always",
+  "jest.enableSnapshotUpdateMessages": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.insertFinalNewline": true,
+  "python.showStartPage": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.suggestSmartCommit": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
